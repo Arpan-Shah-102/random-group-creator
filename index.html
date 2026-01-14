@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random Group Creator</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="./assets/icon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>Random Group Creator</h1>
+        </header>
+        <main>
+            <section class="stats">
+                <section class="options">
+                    <div class="group-size">
+                        <label for="group-size">Group Size:</label>
+                        <input type="number" id="group-size" min="1" value="5" max="25">
+                    </div>
+                    <button id="pick-button">Pick Random Group</button>
+                    <div class="deselect-after-picked">
+                        <label for="deselect-after-picked">Deselect After Picked</label>
+                        <input type="checkbox" id="deselect-after-picked">
+                    </div>
+                </section>
+
+                <section class="result">
+                    <h2>Random Group:</h2>
+                    <p>getRandomGroup()</p>
+                </section>
+            </section>
+
+            <section class="grades">
+                <section class="eighth">
+                    <input type="checkbox" checked id="grade8">
+                    <label for="grade8" class="grade-label">Select 8th Grade</label>
+                    <div class="list-of-people">
+                        <div class="person eighth">
+                            <input id="eighth-person1" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person1">Zoey Benton</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person2" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person2">Reagan Bright</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person3" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person3">Riley Bright</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person4" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person4">Tylee Britton</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person5" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person5">Landry Brown</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person6" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person6">Molly Byrd</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person7" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person7">Cash Davis</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person8" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person8">Elizabeth Frank</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person9" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person9">Allana Giles</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person10" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person10">Grant Howard</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person11" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person11">Liberty Lane</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person12" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person12">Phoenix Lawler</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person13" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person13">May Miller</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person14" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person14">Amiiyah Nunez</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person15" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person15">Jacob Parrish</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person16" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person16">Remi Petett</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person17" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person17">Victrin Ramsey</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person18" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person18">Braxton Rhodes</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person19" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person19">Arpan Shah</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person20" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person20">Fallyn Smith</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person21" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person21">Gabriella Tate</label>
+                        </div>
+                        <div class="person eighth">
+                            <input id="eighth-person22" type="checkbox" class="person-checkbox" checked>
+                            <label for="eighth-person22">Jackson Wright</label>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="seventh">
+                    <input type="checkbox" checked id="grade7">
+                    <label for="grade7" class="grade-label">Select 7th Grade</label>
+                    <div class="list-of-people">
+                        <div class="person seventh">
+                            <input id="seventh-person1" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person1">Rylee Allen</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person2" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person2">Elaine Cook</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person3" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person3">Keely Crenshaw</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person4" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person4">Lylah Davis</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person5" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person5">Blakely Gray</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person6" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person6">Dane Gray</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person7" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person7">Gianni Gribbins</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person8" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person8">Zendaya Griffin</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person9" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person9">Henslee Grubesic</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person10" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person10">Katniss Hudson</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person11" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person11">Zaylin Johnson</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person12" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person12">Hudson Jones</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person13" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person13">Phoenix Lee</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person14" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person14">Ava Muncie</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person15" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person15">DeVonte Noyola</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person16" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person16">Katherine Parrish</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person17" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person17">Peyton Patrick</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person18" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person18">Caydin Perkins</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person19" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person19">Rinoa Ramsey</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person20" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person20">Sawyer Reynolds</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person21" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person21">Caroline Rucker</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person22" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person22">Alexie Sercu</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person23" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person23">Addison Smith</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person24" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person24">Ava Sterbenz</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person25" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person25">Kylie Thompson</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person26" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person26">Matilyn Thompson</label>
+                        </div>
+                        <div class="person seventh">
+                            <input id="seventh-person27" type="checkbox" class="person-checkbox" checked>
+                            <label for="seventh-person27">Maya Webb</label>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer></footer>
+        <script>
+            const footer = document.querySelector("footer");
+            const currentYear = new Date().getFullYear();
+            footer.innerHTML = `&copy; Arpan Shah ${currentYear}`;
+        </script>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

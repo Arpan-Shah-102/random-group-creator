@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
+    background: linear-gradient(45deg, darkblue, lightblue);
+    min-height: 100vh;
+    padding: 50px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+section {
+    background: white;
+    padding: 20px 40px;
+    margin: 30px 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 300px;
+    width: 60vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > section {
+        width: 50vw;
+        display: block;
+    }
+    &.options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    &.result {
+        & > h2 {
+            margin-bottom: 10px;
+        }
+        & > p {
+            line-height: 1.5;
+            text-wrap: wrap;
+        }
+    }
+    &.options, &.result {
+        min-width: 220px;
+    }
+    &.grades {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 40px;
+
+        & > section {
+            margin: 0;
+            min-width: 220px;
+            max-width: 45%;
+            text-align: left;
+
+            & > .list-of-people {
+                margin: 20px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+header {
+    margin-bottom: 50px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+footer {
+    margin-top: 50px;
+    color: white;
+    position: sticky;
+    top: 100vh;
+}
+
+.person, .deselect-after-picked {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+
+    & > * {
+        cursor: pointer;
+    }
+}
+#grade8, #grade7, .grade-label {
+    cursor: pointer;
+    user-select: none;
+}
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 16px;
+    background-color: rgb(0, 138, 184);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: rgb(0, 100, 135);
+        transform: scale(1.05);
+    }
+    &:active {
+        background-color: rgb(0, 80, 110);
+        transform: scale(0.95);
+    }
+}
+.selected {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+input[type="number"] {
+    padding: 4px 8px;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    width: 50px;
+}
