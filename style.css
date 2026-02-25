@@ -51,27 +51,6 @@ section {
     &.options, &.result {
         min-width: 220px;
     }
-    &.grades {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 40px;
-        padding: 40px;
-
-        & > section {
-            margin: 0;
-            min-width: 220px;
-            max-width: 45%;
-            text-align: left;
-
-            & > .list-of-people {
-                margin: 20px;
-                line-height: 1.5;
-            }
-        }
-    }
 }
 header {
     margin-bottom: 50px;
@@ -86,6 +65,138 @@ footer {
     top: 100vh;
 }
 
+/* --- Input Section --- */
+.input-section {
+    & h2 {
+        margin-bottom: 5px;
+    }
+    & .input-description {
+        color: #666;
+        margin-bottom: 15px;
+    }
+}
+.input-methods {
+    width: 100%;
+}
+.tab-buttons {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+.tab-btn {
+    padding: 8px 20px;
+    border: 2px solid rgb(0, 138, 184);
+    border-radius: 16px;
+    background: white;
+    color: rgb(0, 138, 184);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: rgba(0, 138, 184, 0.1);
+        transform: scale(1.05);
+    }
+    &.active {
+        background: rgb(0, 138, 184);
+        color: white;
+    }
+}
+.tab-content {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    resize: vertical;
+    font-family: inherit;
+    transition: border-color 0.2s;
+
+    &:focus {
+        outline: none;
+        border-color: rgb(0, 138, 184);
+    }
+}
+.csv-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 30px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        border-color: rgb(0, 138, 184);
+        background: rgba(0, 138, 184, 0.05);
+    }
+}
+.upload-icon {
+    font-size: 2rem;
+}
+.upload-text {
+    font-weight: bold;
+    color: rgb(0, 138, 184);
+}
+.file-name {
+    font-size: 0.85rem;
+    color: #888;
+}
+.csv-hint {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #999;
+}
+#load-names {
+    margin-top: 15px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* --- People Section --- */
+.people-section {
+    & .people-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    & .people-actions {
+        display: flex;
+        gap: 8px;
+    }
+}
+.list-of-people {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px;
+    width: 100%;
+    text-align: left;
+}
+.danger-btn {
+    background-color: #d9534f;
+    &:hover {
+        background-color: #c9302c;
+    }
+    &:active {
+        background-color: #ac2925;
+    }
+}
+
+/* --- Existing styles --- */
 .person, .deselect-after-picked {
     display: flex;
     align-items: center;
@@ -95,10 +206,6 @@ footer {
     & > * {
         cursor: pointer;
     }
-}
-#grade8, #grade7, .grade-label {
-    cursor: pointer;
-    user-select: none;
 }
 button {
     padding: 5px 10px;
